@@ -33,6 +33,7 @@ fetchDriverWithinArea(app, pool);
 
 // Testing DB
 app.get("/", async (req, res) => {
+    console.log("Hello world");
     const result = await pool.query("SELECT current_database()");
     res.send(`Database : ${result.rows[0].current_database}`);
 })
